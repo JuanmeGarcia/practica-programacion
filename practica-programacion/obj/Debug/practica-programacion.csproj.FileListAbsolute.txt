@@ -1,0 +1,12 @@
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica_programacion.Landing.resources
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica_programacion.Properties.Resources.resources
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica-programacion.csproj.GenerateResource.cache
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica-programacion.csproj.CoreCompileInputs.cache
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\bin\Debug\practica-programacion.exe.config
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\bin\Debug\practica-programacion.exe
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\bin\Debug\practica-programacion.pdb
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\bin\Debug\Guna.UI2.dll
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica_programacion.TableForm.resources
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica-programacion.csproj.CopyComplete
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica-programacion.exe
+C:\Users\Juanme\Desktop\practica-programacion\practica-programacion\obj\Debug\practica-programacion.pdb

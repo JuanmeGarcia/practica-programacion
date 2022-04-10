@@ -10,11 +10,42 @@ using System.Windows.Forms;
 
 namespace practica_programacion
 {
-    public partial class Form1 : Form
+    public partial class Landing : Form
     {
-        public Form1()
+        public Landing()
         {
             InitializeComponent();
+        }
+
+        private void guna2TextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if(msgExit.Show("Estas seguro que deseas salir?", "Advertencia!") == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            TableForm tableForm = new TableForm();
+            tableForm.Show();
+            this.Hide();
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
