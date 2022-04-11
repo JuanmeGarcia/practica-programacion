@@ -16,7 +16,7 @@ namespace practica_programacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TableForm());
+            Application.Run(new Landing());
         }
     }
 }

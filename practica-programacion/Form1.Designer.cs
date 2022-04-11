@@ -31,6 +31,7 @@ namespace practica_programacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Landing));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChangeForm = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,7 +41,7 @@ namespace practica_programacion
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCloseForm = new Guna.UI2.WinForms.Guna2Button();
             this.msgExit = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.btnChangeForm = new Guna.UI2.WinForms.Guna2Button();
+            this.msgInputs = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,26 @@ namespace practica_programacion
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(408, 621);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnChangeForm
+            // 
+            this.btnChangeForm.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangeForm.BorderRadius = 10;
+            this.btnChangeForm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeForm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeForm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangeForm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangeForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnChangeForm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChangeForm.ForeColor = System.Drawing.Color.White;
+            this.btnChangeForm.Location = new System.Drawing.Point(38, 22);
+            this.btnChangeForm.Name = "btnChangeForm";
+            this.btnChangeForm.ShadowDecoration.Enabled = true;
+            this.btnChangeForm.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.btnChangeForm.Size = new System.Drawing.Size(134, 45);
+            this.btnChangeForm.TabIndex = 9;
+            this.btnChangeForm.Text = "View table";
+            this.btnChangeForm.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // pictureBox
             // 
@@ -86,6 +107,7 @@ namespace practica_programacion
             this.btnAdd.Size = new System.Drawing.Size(339, 60);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtName
             // 
@@ -184,6 +206,7 @@ namespace practica_programacion
             this.btnReset.Size = new System.Drawing.Size(339, 60);
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtLastName
             // 
@@ -214,6 +237,7 @@ namespace practica_programacion
             this.txtLastName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.txtLastName.Size = new System.Drawing.Size(339, 47);
             this.txtLastName.TabIndex = 5;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // btnCloseForm
             // 
@@ -240,25 +264,14 @@ namespace practica_programacion
             this.msgExit.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.msgExit.Text = null;
             // 
-            // btnChangeForm
+            // msgInputs
             // 
-            this.btnChangeForm.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangeForm.BorderRadius = 10;
-            this.btnChangeForm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangeForm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangeForm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChangeForm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChangeForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnChangeForm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChangeForm.ForeColor = System.Drawing.Color.White;
-            this.btnChangeForm.Location = new System.Drawing.Point(38, 22);
-            this.btnChangeForm.Name = "btnChangeForm";
-            this.btnChangeForm.ShadowDecoration.Enabled = true;
-            this.btnChangeForm.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.btnChangeForm.Size = new System.Drawing.Size(134, 45);
-            this.btnChangeForm.TabIndex = 9;
-            this.btnChangeForm.Text = "View table";
-            this.btnChangeForm.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.msgInputs.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.msgInputs.Caption = null;
+            this.msgInputs.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            this.msgInputs.Parent = null;
+            this.msgInputs.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.msgInputs.Text = null;
             // 
             // Landing
             // 
@@ -297,6 +310,7 @@ namespace practica_programacion
         private Guna.UI2.WinForms.Guna2Button btnCloseForm;
         private Guna.UI2.WinForms.Guna2MessageDialog msgExit;
         private Guna.UI2.WinForms.Guna2Button btnChangeForm;
+        private Guna.UI2.WinForms.Guna2MessageDialog msgInputs;
     }
 }
 

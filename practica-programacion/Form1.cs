@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,59 @@ namespace practica_programacion
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                return;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        void restart() {
+            txtLastName.Clear();
+            txtName.Clear();
+            txtDni.Clear();
+            dataPicker.Value = DateTime.Now;
+            txtName.Focus();
+        } 
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            restart();
+        }
+
+        Boolean CheckInputs() {
+            if ((txtDni.Text=="" || txtLastName.Text=="" || txtName.Text=="")){
+                msgInputs.Show("Debe completar todas las casillas");
+                return true;
+            }
+            return false;
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (CheckInputs()){
+
+            }
+            else {
+                FileStream Salida = new FileStream("Salida.txt", FileMode.Append);
+                StreamWriter Wsalida = new StreamWriter(Salida);
+                String lineaSalida = "";
+                String registro = $"{txtName.Text};{txtLastName.Text};{txtDni.Text};{dataPicker.Value.ToString().Substring(0, 9)}";
+                Wsalida.WriteLine(registro);
+                Wsalida.Close();
+                Salida.Close();
+                restart();
+            }
+            
         }
     }
 }
